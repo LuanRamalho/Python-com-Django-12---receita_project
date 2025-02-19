@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ receita.nome }}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>{{ receita.nome }}</h1>
+    <img src="{{ receita.imagem_url }}" alt="{{ receita.nome }}">
+    <p><strong>Categoria:</strong> {{ receita.categoria }}</p>
+    <p><strong>Porções:</strong> {{ receita.porcoes }}</p>
+    <p><strong>Tempo de Preparo:</strong> {{ receita.tempo_preparo }} minutos</p>
+    <h3>Ingredientes</h3>
+    <p>{{ receita.ingredientes }}</p>
+    <h3>Modo de Preparo</h3>
+    <p>{{ receita.modo_preparo }}</p>
+    <a href="{% url 'lista_receitas' %}">Voltar à lista</a>
+</body>
+</html>

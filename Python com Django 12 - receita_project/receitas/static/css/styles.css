@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #e44d5d;
+}
+
+.receitas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.receita {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.receita h2 a {
+    text-decoration: none;
+    color: #e44d5d;
+}
+
+.receita p {
+    font-size: 14px;
+    color: #666;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}

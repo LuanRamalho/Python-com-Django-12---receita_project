@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Receitas</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Receitas</h1>
+    <div class="receitas">
+        {% for receita in receitas %}
+            <div class="receita">
+                <h2><a href="{% url 'detalhe_receita' pk=receita.pk %}">{{ receita.nome }}</a></h2>
+                <p>{{ receita.categoria }}</p>
+                <p>{{ receita.tempo_preparo }} minutos</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
